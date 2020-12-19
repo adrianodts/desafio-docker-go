@@ -7,4 +7,4 @@ FROM scratch
 WORKDIR /app
 COPY --from=builder /app/main .
 
-ENTRYPOINT [ "./main", "/bin/bash" ]
+ENTRYPOINT [ "./main" ]
