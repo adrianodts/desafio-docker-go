@@ -1,7 +1,7 @@
 FROM golang AS builder
 WORKDIR /app
 COPY /app .
-RUN go build -o main
+RUN go build -o main -ldflags="-s -w"
 
 FROM scratch
 WORKDIR /app
